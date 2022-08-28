@@ -1,10 +1,13 @@
 import * as React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
+
 export default function LoginScreen() {
   return(
+    
     <View style={styles.container} >
-      <Text style={styles.text}>Login screen</Text>
+      
+      <Text style={styles.title}>Eventio</Text>
       <TextInput style={styles.input} placeholder='Email' />
       <TextInput style={styles.input} placeholder='Password' />
       
@@ -12,8 +15,11 @@ export default function LoginScreen() {
         <TouchableOpacity style={styles.usrBtn1}>
           <Text style={styles.btnTxt1}>Login</Text>
         </TouchableOpacity>
+        <TouchableOpacity style={styles.usrBtn1}>
+          <Text style={styles.btnTxt1}>Login with Google</Text>
+        </TouchableOpacity>   
         <TouchableOpacity style={styles.usrBtn2}>
-          <Text style={styles.btnTxt2}>Register</Text>
+          <Text style={styles.btnTxt2}>Don't have an account yet?</Text>
         </TouchableOpacity>
       </View>
     </View>
@@ -25,14 +31,26 @@ export default function LoginScreen() {
       alignItems: 'center',
       backgroundColor: '#fff9f7',
     },
+    title: {
+      color: '#db7f67',
+      fontSize: 60,
+      fontWeight: 'bold',
+      position: 'absolute',
+      top: '15%'
+    },
     text: {
       textAlign: 'center',
       fontSize: 16
     },
     input: {
+      color: '#db7f67',    
     width: '80%',
     height: '5%',
-    padding: 10,
+    margin: 15,
+    borderColor: '#db7f67',
+   
+
+borderBottomWidth : 1,
     },
 
 
@@ -43,6 +61,7 @@ export default function LoginScreen() {
     },
     btnTxt2: {
       textAlign: 'center',
+      color: '#db7f67',
     },
 
 
