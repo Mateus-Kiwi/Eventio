@@ -42,9 +42,9 @@ export default function Main() {
             tabBarOptions={{
                 
                 activeTintColor: '#db7f67',
-                inactiveTintColor: '#fff9f7',
+                inactiveTintColor: '#a3a3a3',
                 activeBackgroundColor: '#fff9f7',
-                inactiveBackgroundColor: '#db7f67',
+                inactiveBackgroundColor: '#fff9f7',
                 labelStyle: { paddingBottom: 0, fontSize: 0, },
                 style: {padding: 10, height: 70}
             }}

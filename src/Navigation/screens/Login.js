@@ -73,9 +73,9 @@ borderBottomWidth : 1,
       fontSize: 16,
     },
     btnTxt2: {
-      
+      fontSize: 15,
       textAlign: 'center',
-      color: '#db7f67',
+      color: '#a3a3a3',
     },
 
 
@@ -95,9 +95,9 @@ borderBottomWidth : 1,
     usrBtn2: {
       elevation: 5,
       shadowColor: '#000',
-      shadowOffset: {width: 0, height: 1},
+      shadowOffset: {width: 0, height: 3},
       shadowOpacity: 0.3,
-      shadowRadius: 5,      
+      shadowRadius: 8,      
       backgroundColor: '#db7f67',
       width: '100%',
       borderRadius: 15,
@@ -107,7 +107,7 @@ borderBottomWidth : 1,
     },
     usrBtn3: {
      
-
+      
       width: '100%',
       borderRadius: 15,
       padding: 15,
@@ -122,6 +122,7 @@ borderBottomWidth : 1,
       flexDirection: 'column',
       justifyContent: 'flex-start',
       width: '85%',
+      alignItems: 'center'
     }
     
   
