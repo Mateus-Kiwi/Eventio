@@ -80,7 +80,7 @@ borderBottomWidth : 1,
 
 
     usrBtn1: {
-      elevation: 10,
+      elevation: 5,
       backgroundColor: '#db7f67',
       width: '100%',
       borderRadius: 15,
@@ -89,7 +89,7 @@ borderBottomWidth : 1,
       margin: 5,
     },
     usrBtn2: {
-      elevation: 10,
+      elevation: 5,
       backgroundColor: '#db7f67',
       width: '100%',
       borderRadius: 15,
