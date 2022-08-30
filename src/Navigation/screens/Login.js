@@ -8,19 +8,27 @@ export default function LoginScreen() {
     <View style={styles.container} >
       
       <Text style={styles.title}>Eventio</Text>
-      <TextInput style={styles.input} placeholder='Email' />
+      
+
+      <TextInput style={styles.input} placeholder='Email Address' />
       <TextInput style={styles.input} placeholder='Password' />
       
+      
+
       <View style={styles.btnCont}>
+
         <TouchableOpacity style={styles.usrBtn1}>
           <Text style={styles.btnTxt1}>Login</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={styles.usrBtn1}>
+
+        <TouchableOpacity style={styles.usrBtn2}>
           <Text style={styles.btnTxt1}>Login with Google</Text>
         </TouchableOpacity>   
-        <TouchableOpacity style={styles.usrBtn2}>
+
+        <TouchableOpacity style={styles.usrBtn3}>
           <Text style={styles.btnTxt2}>Don't have an account yet?</Text>
         </TouchableOpacity>
+
       </View>
     </View>
   )}
@@ -32,22 +40,26 @@ export default function LoginScreen() {
       backgroundColor: '#fff9f7',
     },
     title: {
+      flex: 4,
       color: '#db7f67',
       fontSize: 60,
       fontWeight: 'bold',
-      position: 'absolute',
+      position: 'relative',
       top: '15%'
     },
     text: {
+      
       textAlign: 'center',
       fontSize: 16
     },
     input: {
+     
       color: '#db7f67',    
-    width: '80%',
-    height: '5%',
-    margin: 15,
-    borderColor: '#db7f67',
+      justifyContent: 'flex-start',
+      width: '80%',
+      height: '5%',
+      margin: 15,
+      borderColor: '#db7f67',
    
 
 borderBottomWidth : 1,
@@ -55,17 +67,20 @@ borderBottomWidth : 1,
 
 
     btnTxt1: {
+      
       color: '#ffffff',
       textAlign: 'center',
       fontSize: 16,
     },
     btnTxt2: {
+      
       textAlign: 'center',
       color: '#db7f67',
     },
 
 
     usrBtn1: {
+      elevation: 10,
       backgroundColor: '#db7f67',
       width: '100%',
       borderRadius: 15,
@@ -74,6 +89,17 @@ borderBottomWidth : 1,
       margin: 5,
     },
     usrBtn2: {
+      elevation: 10,
+      backgroundColor: '#db7f67',
+      width: '100%',
+      borderRadius: 15,
+      padding: 15,
+      textAlign: 'center',
+      margin: 5,
+    },
+    usrBtn3: {
+     
+
       width: '100%',
       borderRadius: 15,
       padding: 15,
@@ -83,8 +109,10 @@ borderBottomWidth : 1,
 
 
     btnCont: {
+      flex: 3,
+      marginTop: 30,
       flexDirection: 'column',
-      justifyContent: 'space-between',
+      justifyContent: 'flex-start',
       width: '85%',
     }
     
