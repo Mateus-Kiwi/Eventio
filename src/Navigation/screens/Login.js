@@ -2,7 +2,10 @@ import * as React from 'react';
 import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 
-export default function LoginScreen() {
+export default function LoginScreen({navigation}) {
+  function navigateToHome() {
+    navigation.navigate('Home')
+  }
   return(
     
     <View style={styles.container} >
@@ -17,7 +20,7 @@ export default function LoginScreen() {
 
       <View style={styles.btnCont}>
 
-        <TouchableOpacity style={styles.usrBtn1}>
+        <TouchableOpacity onPress={navigateToHome}  style={styles.usrBtn1}>
           <Text style={styles.btnTxt1}>Login</Text>
         </TouchableOpacity>
 

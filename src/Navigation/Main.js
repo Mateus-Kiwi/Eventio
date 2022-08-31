@@ -4,6 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs'
 import IonIcons from 'react-native-vector-icons/Ionicons'
 
+
 //Screens
 import HomeScreen from './screens/Home';
 import SearchScreen from './screens/Search';
@@ -20,7 +21,7 @@ const Tab = createBottomTabNavigator();
 
 export default function Main() {
     return(
-      <NavigationContainer>
+      <NavigationContainer independent={true}>
         <Tab.Navigator
             initialRouteName={homeName}
             screenOptions={({route}) => ({
