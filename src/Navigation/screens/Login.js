@@ -13,8 +13,8 @@ export default function LoginScreen({navigation}) {
       <Text style={styles.title}>Eventio</Text>
       
 
-      <TextInput style={styles.input} placeholder='Email Address' />
-      <TextInput style={styles.input} placeholder='Password' />
+      <TextInput style={styles.input} placeholder='Email Address' placeholderTextColor='#a3a3a3' />
+      <TextInput style={styles.input} placeholder='Password'  placeholderTextColor='#a3a3a3'/>
       
       
 
