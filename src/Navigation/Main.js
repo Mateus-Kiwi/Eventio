@@ -51,9 +51,9 @@ export default function Main() {
             }}
             >
 
-            <Tab.Screen name={homeName} component={HomeScreen}/>
-            <Tab.Screen name={searchName} component={SearchScreen}/>
-            <Tab.Screen name={createName} component={CreateScreen}/>
+            <Tab.Screen name={homeName} component={HomeScreen} options={{headerShown: false}}/>
+            <Tab.Screen name={searchName} component={SearchScreen} options={{headerShown: false}}/>
+            <Tab.Screen name={createName} component={CreateScreen} options={{headerShown: false}}/>
 
         </Tab.Navigator>
       </NavigationContainer>

@@ -1,5 +1,5 @@
 import * as React from 'react';
-import { View, Text, StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 
 
 export default function LoginScreen({navigation}) {
@@ -25,7 +25,8 @@ export default function LoginScreen({navigation}) {
         </TouchableOpacity>
 
         <TouchableOpacity style={styles.usrBtn2}>
-          <Text style={styles.btnTxt1}>Login with Google</Text>
+        <Image source={require('../../Img/logoBranco.png')}style={styles.googlelogo}/>
+         
         </TouchableOpacity>   
 
         <TouchableOpacity style={styles.usrBtn3}>
@@ -90,8 +91,9 @@ borderBottomWidth : 1,
       shadowRadius: 5,            
       backgroundColor: '#db7f67',
       width: '100%',
+      height: 50,
       borderRadius: 15,
-      padding: 15,
+      justifyContent: 'center',
       textAlign: 'center',
       margin: 5,
     },
@@ -103,10 +105,17 @@ borderBottomWidth : 1,
       shadowRadius: 8,      
       backgroundColor: '#db7f67',
       width: '100%',
+      height: 50,
       borderRadius: 15,
-      padding: 15,
+      justifyContent: 'center',
       textAlign: 'center',
       margin: 5,
+    },
+    googlelogo:{
+      width: 120,
+      height: 25,
+      resizeMode: 'contain',
+      alignSelf: 'center',
     },
     usrBtn3: {
      
