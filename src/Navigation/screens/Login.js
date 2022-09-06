@@ -10,6 +10,10 @@ export default function LoginScreen({navigation}) {
   function navigateToHome() {
     navigation.navigate('Home')
   }
+  function navigateToRegister() {
+    navigation.navigate('Register')
+  }
+
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
@@ -36,8 +40,8 @@ export default function LoginScreen({navigation}) {
       
 
       <View style={styles.btnCont}>
-      {/* onPress={navigateToHome} */}
-        <TouchableOpacity  onPress={registerUser} style={styles.usrBtn1}>
+     
+        <TouchableOpacity  onPress={navigateToHome}  style={styles.usrBtn1}>
           <Text style={styles.btnTxt1}>Login</Text>
         </TouchableOpacity>
 
@@ -46,7 +50,7 @@ export default function LoginScreen({navigation}) {
          
         </TouchableOpacity>   
 
-        <TouchableOpacity style={styles.usrBtn3}>
+        <TouchableOpacity onPress={navigateToRegister} style={styles.usrBtn3}>
           <Text style={styles.btnTxt2}>Don't have an account yet?</Text>
         </TouchableOpacity>
 
@@ -91,7 +95,7 @@ borderBottomWidth : 1,
       
       color: '#ffffff',
       textAlign: 'center',
-      fontSize: 16,
+      fontSize: 20,
     },
     btnTxt2: {
       fontSize: 15,

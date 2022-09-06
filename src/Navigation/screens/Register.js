@@ -11,6 +11,7 @@ export default function LoginScreen({navigation}) {
     navigation.navigate('Home')
   }
   const [isSignedIn, setIsSignedIn] = useState(false);
+  const [username, setUsername] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const registerUser = () => {
@@ -27,9 +28,9 @@ export default function LoginScreen({navigation}) {
     
     <View style={styles.container} >
       
-      <Text style={styles.title}>Eventio</Text>
+      <Text style={styles.title}>Welcome!</Text>
       
-
+      <TextInput style={styles.input} value={username} onChangeText={text=>setUsername(text)} placeholder='Username' placeholderTextColor='#a3a3a3' />
       <TextInput style={styles.input} value={email} onChangeText={text=>setEmail(text)} placeholder='Email Address' placeholderTextColor='#a3a3a3' />
       <TextInput style={styles.input} value={password} onChangeText={text=>setPassword(text)} secureTextEntry placeholder='Password'  placeholderTextColor='#a3a3a3'/>
       
@@ -38,16 +39,7 @@ export default function LoginScreen({navigation}) {
       <View style={styles.btnCont}>
       {/* onPress={navigateToHome} */}
         <TouchableOpacity  onPress={registerUser} style={styles.usrBtn1}>
-          <Text style={styles.btnTxt1}>Login</Text>
-        </TouchableOpacity>
-
-        <TouchableOpacity style={styles.usrBtn2}>
-        <Image source={require('../../Img/logoBranco.png')}style={styles.googlelogo}/>
-         
-        </TouchableOpacity>   
-
-        <TouchableOpacity style={styles.usrBtn3}>
-          <Text style={styles.btnTxt2}>Don't have an account yet?</Text>
+          <Text style={styles.btnTxt1}>Register</Text>
         </TouchableOpacity>
 
       </View>
@@ -63,7 +55,7 @@ export default function LoginScreen({navigation}) {
     title: {
       flex: 4,
       color: '#db7f67',
-      fontSize: 60,
+      fontSize: 50,
       fontWeight: 'bold',
       position: 'relative',
       top: '15%'
@@ -79,7 +71,7 @@ export default function LoginScreen({navigation}) {
       justifyContent: 'flex-start',
       width: '80%',
       height: '5%',
-      margin: 15,
+      margin: 10,
       borderColor: '#db7f67',
    
 
@@ -91,7 +83,7 @@ borderBottomWidth : 1,
       
       color: '#ffffff',
       textAlign: 'center',
-      fontSize: 16,
+      fontSize: 20,
     },
     btnTxt2: {
       fontSize: 15,

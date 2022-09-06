@@ -9,6 +9,7 @@ const Stack = createStackNavigator()
 
 import Login from './screens/Login';
 import Home from './Main';
+import Register from './screens/Register'
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
    <Stack.Navigator LoginRouteName='Login'>
      <Stack.Screen name='Login' component={Login} options={{headerShown: false}}/>
      <Stack.Screen name='Home' component={Home} options={{headerShown: false}}/>
+     <Stack.Screen name='Register' component={Register} options={{headerShown: false}}/>
    </Stack.Navigator>
  </NavigationContainer>
   );
