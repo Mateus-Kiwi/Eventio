@@ -1,11 +1,28 @@
 import * as React from 'react';
+import { useState } from 'react';
 import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { authentication } from '../../../firebase/firebase';
+import { createUserWithEmailAndPassword } from "firebase/auth";
+
 
 
 export default function LoginScreen({navigation}) {
   function navigateToHome() {
     navigation.navigate('Home')
   }
+  const [isSignedIn, setIsSignedIn] = useState(false);
+  const [email, setEmail] = useState('');
+  const [password, setPassword] = useState('');
+  const registerUser = () => {
+    createUserWithEmailAndPassword(authentication, email, password)
+    .then((re)=>{
+      console.log(re);
+    })
+    .catch((re)=>{
+      console.log(re);
+    })
+  }
+
   return(
     
     <View style={styles.container} >
@@ -13,14 +30,14 @@ export default function LoginScreen({navigation}) {
       <Text style={styles.title}>Eventio</Text>
       
 
-      <TextInput style={styles.input} placeholder='Email Address' placeholderTextColor='#a3a3a3' />
-      <TextInput style={styles.input} placeholder='Password'  placeholderTextColor='#a3a3a3'/>
+      <TextInput style={styles.input} value={email} onChangeText={text=>setEmail(text)} placeholder='Email Address' placeholderTextColor='#a3a3a3' />
+      <TextInput style={styles.input} value={password} onChangeText={text=>setPassword(text)} secureTextEntry placeholder='Password'  placeholderTextColor='#a3a3a3'/>
       
       
 
       <View style={styles.btnCont}>
-
-        <TouchableOpacity onPress={navigateToHome}  style={styles.usrBtn1}>
+      {/* onPress={navigateToHome} */}
+        <TouchableOpacity  onPress={registerUser} style={styles.usrBtn1}>
           <Text style={styles.btnTxt1}>Login</Text>
         </TouchableOpacity>
 
