@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useState } from 'react';
 import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity } from 'react-native';
 import { authentication } from '../../../Firebase/firebase';
-import { createUserWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword  } from "firebase/auth";
 
 
 
@@ -17,15 +17,23 @@ export default function LoginScreen({navigation}) {
   const [isSignedIn, setIsSignedIn] = useState(false);
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const registerUser = () => {
-    createUserWithEmailAndPassword(authentication, email, password)
-    .then((re)=>{
-      console.log(re);
+  const signInUser = () => {
+    signInWithEmailAndPassword(authentication, email, password)
+    .then((userCredential)=>{
+      setIsSignedIn(true)
+      console.log("Logged in")
+      const user = userCredential.user
+      console.log(user)
+      navigation.navigate('Home')
+
     })
-    .catch((re)=>{
-      console.log(re);
+    .catch((err)=>{
+      console.log(err);
     })
   }
+
+
+  
 
   return(
     
@@ -40,10 +48,18 @@ export default function LoginScreen({navigation}) {
       
 
       <View style={styles.btnCont}>
-     
-        <TouchableOpacity  onPress={navigateToHome}  style={styles.usrBtn1}>
+      {/* onPress={navigateToHome}  */}
+        {/* {isSignedIn === true?
+        // SignOut
+        <TouchableOpacity  onPress={signOutUser} style={styles.usrBtn1}>
+          <Text style={styles.btnTxt1}>Logout</Text>
+        </TouchableOpacity>
+        : */}
+
+        <TouchableOpacity  onPress={signInUser} style={styles.usrBtn1}>
           <Text style={styles.btnTxt1}>Login</Text>
         </TouchableOpacity>
+        
 
         <TouchableOpacity style={styles.usrBtn2}>
         <Image source={require('../../Img/logoBranco.png')}style={styles.googlelogo}/>

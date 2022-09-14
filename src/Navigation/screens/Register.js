@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { authentication } from '../../../Firebase/firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
@@ -16,11 +16,14 @@ export default function LoginScreen({navigation}) {
   const [password, setPassword] = useState('');
   const registerUser = () => {
     createUserWithEmailAndPassword(authentication, email, password)
-    .then((re)=>{
-      console.log(re);
+    .then((userCredential)=>{
+      console.log("account created");
+      const user = userCredential.user
+      console.log(user)
     })
-    .catch((re)=>{
-      console.log(re);
+    .catch((err)=>{
+      console.log(err)
+      Alert.alert(err.message)
     })
   }
 
