@@ -44,8 +44,8 @@ export default function Main() {
                 
                 activeTintColor: '#db7f67',
                 inactiveTintColor: '#a3a3a3',
-                activeBackgroundColor: '#fff9f7',
-                inactiveBackgroundColor: '#fff9f7',
+                activeBackgroundColor: '#fffbfa',
+                inactiveBackgroundColor: '#fffbfa',
                 labelStyle: { paddingBottom: 0, fontSize: 0, },
                 style: {padding: 10, height: 70}
             }}

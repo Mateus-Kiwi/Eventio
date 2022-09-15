@@ -29,6 +29,7 @@ export default function LoginScreen({navigation}) {
     })
     .catch((err)=>{
       console.log(err);
+      
     })
   }
 
@@ -78,7 +79,7 @@ export default function LoginScreen({navigation}) {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fff9f7',
+      backgroundColor: '#fffbfa',
     },
     title: {
       flex: 4,
