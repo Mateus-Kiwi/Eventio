@@ -40,9 +40,9 @@ export default function LoginScreen({navigation}) {
     
     <View style={styles.container} >
       
-      <Text style={styles.title}>Eventio</Text>
+      <Text style={styles.title}>Login</Text>
       
-
+      
       <TextInput style={styles.input} value={email} onChangeText={text=>setEmail(text)} placeholder='Email Address' placeholderTextColor='#a3a3a3' />
       <TextInput style={styles.input} value={password} onChangeText={text=>setPassword(text)} secureTextEntry placeholder='Password'  placeholderTextColor='#a3a3a3'/>
       
@@ -79,12 +79,12 @@ export default function LoginScreen({navigation}) {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fffbfa',
+      backgroundColor: '#FCF7F8',
     },
     title: {
       flex: 4,
       color: '#db7f67',
-      fontSize: 60,
+      fontSize: 50,
       fontWeight: 'bold',
       position: 'relative',
       top: '15%'
@@ -98,19 +98,19 @@ export default function LoginScreen({navigation}) {
      
       color: '#db7f67',    
       justifyContent: 'flex-start',
-      width: '80%',
-      height: '5%',
-      margin: 15,
+      width: '85%',
+      height: 50,
+      paddingLeft: 15,
+      margin: 5,
       borderColor: '#db7f67',
-   
-
-borderBottomWidth : 1,
+      backgroundColor: '#F9E5EA',
+      borderRadius: 15,
     },
 
 
     btnTxt1: {
       
-      color: '#ffffff',
+      color: '#FCF7F8',
       textAlign: 'center',
       fontSize: 20,
     },

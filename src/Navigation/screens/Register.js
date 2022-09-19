@@ -72,19 +72,21 @@ export default function LoginScreen({navigation}) {
      
       color: '#db7f67',    
       justifyContent: 'flex-start',
-      width: '80%',
-      height: '5%',
-      margin: 10,
+      width: '85%',
+      height: 50,
+      paddingLeft: 15,
+      margin: 5,
       borderColor: '#db7f67',
+      backgroundColor: '#F9E5EA',
+      borderRadius: 15,
    
 
-borderBottomWidth : 1,
     },
 
 
     btnTxt1: {
       
-      color: '#ffffff',
+      color: '#FCF7F8',
       textAlign: 'center',
       fontSize: 20,
     },

@@ -4,7 +4,7 @@ import { View, Text, StyleSheet, Button } from 'react-native';
 
 export default function HomeScreen({navigation}) {
   return(
-    <View style={{ backgroundColor: '#fffbfa', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
+    <View style={{ backgroundColor: '#FCF7F8', flex: 1, alignItems: 'center', justifyContent: 'center'}}>
       <Text style={styles.text}>Eventos da semana</Text>
       
     </View>
