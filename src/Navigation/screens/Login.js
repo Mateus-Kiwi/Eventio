@@ -1,6 +1,6 @@
 import * as React from 'react';
 import { useState } from 'react';
-import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity } from 'react-native';
+import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
 import { authentication } from '../../../Firebase/firebase';
 import { signInWithEmailAndPassword  } from "firebase/auth";
 
@@ -28,11 +28,10 @@ export default function LoginScreen({navigation}) {
 
     })
     .catch((err)=>{
-      console.log(err);
-      
+      console.log(err)
+      Alert.alert(err.message)
     })
   }
-
 
   
 
