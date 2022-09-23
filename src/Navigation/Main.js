@@ -32,7 +32,7 @@ export default function Main() {
                     if (rn === homeName) {
                         iconName = focused ? 'home' : 'home-outline'
                     } else if (rn === searchName) {
-                        iconName = focused ? 'search' : 'search'
+                        iconName = focused ? 'search' : 'search-outline'
                     } else if (rn === createName) {
                         iconName = focused ? 'add' : 'add-outline'
                     }
