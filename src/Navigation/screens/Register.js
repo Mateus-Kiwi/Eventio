@@ -20,6 +20,7 @@ export default function LoginScreen({navigation}) {
       console.log("account created");
       const user = userCredential.user
       console.log(user)
+      navigation.navigate('Home')
     })
     .catch((err)=>{
       console.log(err)
