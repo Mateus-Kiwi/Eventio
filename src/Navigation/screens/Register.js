@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { authentication } from '../../../Firebase/firebase';
+import { authentication, createUserDocument } from '../../../Firebase/firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
@@ -15,8 +15,10 @@ export default function LoginScreen({navigation}) {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const registerUser = () => {
-    createUserWithEmailAndPassword(authentication, email, password)
+    createUserWithEmailAndPassword(authentication, email, password, username)
+    
     .then((userCredential)=>{
+      createUserDocument(user, {username})
       console.log("account created");
       const user = userCredential.user
       console.log(user)
@@ -54,11 +56,11 @@ export default function LoginScreen({navigation}) {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      backgroundColor: '#fffbfa',
+      backgroundColor: '#f8ebff',
     },
     title: {
       flex: 4,
-      color: '#db7f67',
+      color: '#552583',
       fontSize: 50,
       fontWeight: 'bold',
       position: 'relative',
@@ -71,17 +73,15 @@ export default function LoginScreen({navigation}) {
     },
     input: {
      
-      color: '#db7f67',    
+      color: '#552583',    
       justifyContent: 'flex-start',
       width: '85%',
       height: 50,
       paddingLeft: 15,
       margin: 5,
       borderColor: '#db7f67',
-      backgroundColor: '#F9E5EA',
+      backgroundColor: '#f3dbff',
       borderRadius: 15,
-   
-
     },
 
 
@@ -104,7 +104,7 @@ export default function LoginScreen({navigation}) {
       shadowOffset: {width: 0, height: 1},
       shadowOpacity: 0.3,
       shadowRadius: 5,            
-      backgroundColor: '#db7f67',
+      backgroundColor: '#552583',
       width: '100%',
       height: 50,
       borderRadius: 15,
@@ -118,7 +118,7 @@ export default function LoginScreen({navigation}) {
       shadowOffset: {width: 0, height: 3},
       shadowOpacity: 0.3,
       shadowRadius: 8,      
-      backgroundColor: '#db7f67',
+      backgroundColor: '#552583',
       width: '100%',
       height: 50,
       borderRadius: 15,
@@ -155,5 +155,7 @@ export default function LoginScreen({navigation}) {
   
   })
    
+ 
+  
  
   
