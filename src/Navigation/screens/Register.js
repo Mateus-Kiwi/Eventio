@@ -18,7 +18,6 @@ export default function LoginScreen({navigation}) {
     createUserWithEmailAndPassword(authentication, email, password, username)
     
     .then((userCredential)=>{
-      createUserDocument(user, {username})
       console.log("account created");
       const user = userCredential.user
       console.log(user)
