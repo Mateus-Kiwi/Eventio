@@ -1,7 +1,7 @@
 import * as React from 'react';
 import { useState } from 'react';
 import { View, Text, Image,  StyleSheet, TextInput, TouchableOpacity, Alert } from 'react-native';
-import { authentication, createUserDocument } from '../../../Firebase/firebase';
+import { authentication, createUserDocument } from '../../../Firebase/Firebase';
 import { createUserWithEmailAndPassword } from "firebase/auth";
 
 
