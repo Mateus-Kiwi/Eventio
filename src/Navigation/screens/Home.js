@@ -13,12 +13,4 @@ export default function HomeScreen({navigation}) {
     </View>
   );
 }
-const styles = StyleSheet.create({
-  text :{ 
-    color: '#552583',
-    fontSize: 20,
-    fontWeight: '',
-    
-  },
-});
-
+import { styles } from '../../Assets/Style';
